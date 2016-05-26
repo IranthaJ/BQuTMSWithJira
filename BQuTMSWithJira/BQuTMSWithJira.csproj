@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2664B46B-0365-4F3B-90D5-747FB6E74E5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BQuTMSWithJira</RootNamespace>
+    <AssemblyName>BQuTMSWithJira</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ICON.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification">
+      <HintPath>..\..\..\Projects\BQU TMS\SAMSMultiInputDevices\Resources\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="JIRA_Library">
+      <HintPath>..\..\JIRA_Library\JIRA_Library\bin\Debug\JIRA_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Odbc">
+      <HintPath>..\..\..\Projects\My Biometric\LS Fingerprint Reader Setup32bit\LSFingerprint\Resources\Microsoft.Data.Odbc.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="WPFToolkit.Extended, Version=1.4.0.2, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WPFToolkit.Extended.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AboutTMS.xaml.cs">
+      <DependentUpon>AboutTMS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewTask.xaml.cs">
+      <DependentUpon>AddNewTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddTask.cs" />
+    <Compile Include="AddTimesheet.cs" />
+    <Compile Include="AllLeaves.cs" />
+    <Compile Include="BalloonTipIcon.cs" />
+    <Compile Include="BaloonNotification.xaml.cs">
+      <DependentUpon>BaloonNotification.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CheckServerConnection.cs" />
+    <Compile Include="CircularProgressBar.xaml.cs">
+      <DependentUpon>CircularProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientIdleHandler.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="DateMonthSelection.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="GetIdleTime.cs" />
+    <Compile Include="Holidays.cs" />
+    <Compile Include="HtmlRemoval.cs" />
+    <Compile Include="IdleTimeTrack.xaml.cs">
+      <DependentUpon>IdleTimeTrack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Leave.cs" />
+    <Compile Include="LeaveRequest.xaml.cs">
+      <DependentUpon>LeaveRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs" />
+    <Compile Include="LoginReminder.xaml.cs">
+      <DependentUpon>LoginReminder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs" />
+    <Compile Include="NotifyIcon.cs" />
+    <Compile Include="NumberToPolarValueConverter.cs" />
+    <Compile Include="Option.xaml.cs">
+      <DependentUpon>Option.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OutofOffice.xaml.cs">
+      <DependentUpon>OutofOffice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReminderTSAdd.xaml.cs">
+      <DependentUpon>ReminderTSAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleInstance.cs" />
+    <Compile Include="TaskReminderCount.cs" />
+    <Compile Include="TaskReminderWindow.xaml.cs">
+      <DependentUpon>TaskReminderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimeSheet.xaml.cs">
+      <DependentUpon>TimeSheet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserConfig.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="XMLRedWri.cs" />
+    <Page Include="AboutTMS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddNewTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BaloonNotification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CircularProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IdleTimeTrack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LeaveRequest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginReminder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalenderColorCode.cs" />
+    <Compile Include="Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Option.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OutofOffice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReminderTSAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TaskReminderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TimeSheet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\profilepic_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\test_profilepic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mainwindow_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\home_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\home_hover_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\leaveRequest_btn_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\leaveRequest_hover_btn_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\outofoffice_btn_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\outofoffice_hover_btn_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\taskreminder_hover_img_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\taskreminder_img_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\timesheet_btn_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\timesheet_hover_btn_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\calendar_navigation_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\calendar_navigation_left_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\calendar_navigation_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\calendar_navigation_right_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\calender_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\settings_btn_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\settings_hover_btn_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\timesheet_head_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\timesheet_tothours.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\reminLeaves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\leave_history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\leave_history_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\taskReminder_heading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addtask_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addtask_btn_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\task_btn_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\timetracker_tab_clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\timesheet_tab_clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\login_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\login_btn_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logout_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logout_btn_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\chair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\delete-alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NotifyIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tmslogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\taskrem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="Images\SplashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\settings_tabbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\changePasswordClicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ICON.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Close.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

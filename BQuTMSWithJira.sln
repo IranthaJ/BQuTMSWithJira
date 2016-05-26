@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BQuTMSSetup", "BQuTMSSetup\BQuTMSSetup.vdproj", "{9C020022-7FAE-446C-BFD9-630FBF816A21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BQuTMSWithJira", "BQuTMSWithJira\BQuTMSWithJira.csproj", "{2664B46B-0365-4F3B-90D5-747FB6E74E5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C020022-7FAE-446C-BFD9-630FBF816A21}.Debug|x86.ActiveCfg = Debug
+		{9C020022-7FAE-446C-BFD9-630FBF816A21}.Release|x86.ActiveCfg = Release
+		{2664B46B-0365-4F3B-90D5-747FB6E74E5D}.Debug|x86.ActiveCfg = Debug|x86
+		{2664B46B-0365-4F3B-90D5-747FB6E74E5D}.Debug|x86.Build.0 = Debug|x86
+		{2664B46B-0365-4F3B-90D5-747FB6E74E5D}.Release|x86.ActiveCfg = Release|x86
+		{2664B46B-0365-4F3B-90D5-747FB6E74E5D}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="BQuTMSWithJira.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="448" d:DesignWidth="352" Background="White">
+    <Grid Loaded="Grid_Loaded">
+        <Label Height="29" HorizontalAlignment="Left" Margin="15,16,0,0" Name="label1" VerticalAlignment="Top" Width="322" Background="#FFEEF3F7" BorderBrush="{x:Null}" />
+        
+        <Image  Height="25" HorizontalAlignment="Left" Margin="15,18,0,0" Name="calender_left_but_img" Stretch="Fill" VerticalAlignment="Top" Width="25" MouseLeftButtonDown="calender_left_but_MouseLeftButtonDown" >
+            <Image.Style>
+                <Style>
+                    <Style.Triggers>
+                        <Trigger Property="UIElement.IsMouseOver" Value="True">
+                            <Setter Property="Image.Source" Value="/BQuTMSWithJira;component/Images/calendar_navigation_left_hover.png" />
+                        </Trigger>
+                    </Style.Triggers>
+                    <Setter Property="Image.Source" Value="/BQuTMSWithJira;component/Images/calendar_navigation_left.png" />
+                </Style>
+            </Image.Style>
+        </Image>
+
+        <Image Height="25" HorizontalAlignment="Left" Margin="312,18,0,0" Name="calender_right_but_img" Stretch="Fill" VerticalAlignment="Top" Width="25" MouseLeftButtonDown="calender_right_but_MouseLeftButtonDown">
+            <Image.Style>
+                <Style>
+                    <Style.Triggers>
+                        <Trigger Property="UIElement.IsMouseOver" Value="True">
+                            <Setter Property="Image.Source" Value="/BQuTMSWithJira;component/Images/calendar_navigation_right_hover.png" />
+                        </Trigger>
+                    </Style.Triggers>
+                    <Setter Property="Image.Source" Value="/BQuTMSWithJira;component/Images/calendar_navigation_right.png" />
+                </Style>
+            </Image.Style>
+        </Image>
+        <Label Content="October 2012" Height="29" HorizontalAlignment="Left" Margin="38,16,0,0" Name="month_lab" VerticalAlignment="Top" Width="276" FontWeight="Medium" Foreground="#FF054FB0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="13" />
+        <Image Height="187" HorizontalAlignment="Left" Margin="15,56,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="322" Source="/BQuTMSWithJira;component/Images/calender_background.png" />
+        <Label Content="Mo" Height="26" HorizontalAlignment="Left" Margin="16,56,0,0" Name="label3" VerticalAlignment="Top" Width="42" Foreground="White" FontWeight="Medium" FontStretch="Condensed" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="13" />
+        <Label Content="Tu" FontStretch="Condensed" FontWeight="Medium" Foreground="White" Height="26" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="62,56,0,0" Name="label4" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="42" FontSize="13" />
+        <Label Content="We" FontStretch="Condensed" FontWeight="Medium" Foreground="White" Height="26" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="108,56,0,0" Name="label5" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="42" FontSize="13" />
+        <Label Content="Th" FontStretch="Condensed" FontWeight="Medium" Foreground="White" Height="26" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="154,56,0,0" Name="label6" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="42" FontSize="13" />
+        <Label Content="Fr" FontStretch="Condensed" FontWeight="Medium" Foreground="White" Height="26" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="200,56,0,0" Name="label7" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="42" FontSize="13" />
+        <Label Content="Sa" FontStretch="Condensed" FontWeight="Medium" Foreground="White" Height="26" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="247,56,0,0" Name="label8" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="42" FontSize="13" />
+        <Label Content="Su" FontStretch="Condensed" FontWeight="Medium" Foreground="White" Height="26" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="292,56,0,0" Name="label9" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="42" FontSize="13" />
+        <Label Content="1" Height="25" HorizontalAlignment="Right" Margin="0,84,154,0" Name="cd_4_lab" VerticalAlignment="Top" Width="44" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontWeight="SemiBold" Foreground="#FF2D2E32" Background="{x:Null}" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,111,154,0" Name="cd_11_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,84,108,0" Name="cd_5_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,84,200,0" Name="cd_3_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,84,246,0" Name="cd_2_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="16,84,0,0" Name="cd_1_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,111,292,0" Name="cd_8_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="16,138,0,0" Name="cd_15_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,165,292,0" Name="cd_22_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="16,191,0,0" Name="cd_29_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,218,292,0" Name="cd_36_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,111,246,0" Name="cd_9_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,138,246,0" Name="cd_16_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="62,165,0,0" Name="cd_23_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,191,246,0" Name="cd_30_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="62,218,0,0" Name="cd_37_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,111,200,0" Name="cd_10_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="108,138,0,0" Name="cd_17_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,165,200,0" Name="cd_24_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,191,200,0" Name="cd_31_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,218,200,0" Name="cd_38_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="154,138,0,0" Name="cd_18_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,165,154,0" Name="cd_25_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,191,154,0" Name="cd_32_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,218,154,0" Name="cd_39_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,111,108,0" Name="cd_12_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,138,108,0" Name="cd_19_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,165,108,0" Name="cd_26_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="200,191,0,0" Name="cd_33_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,218,108,0" Name="cd_40_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,84,62,0" Name="cd_6_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,111,62,0" Name="cd_13_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,138,62,0" Name="cd_20_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,165,62,0" Name="cd_27_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,191,62,0" Name="cd_34_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,218,62,0" Name="cd_41_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,84,16,0" Name="cd_7_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,111,16,0" Name="cd_14_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,138,16,0" Name="cd_21_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,165,16,0" Name="cd_28_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,191,16,0" Name="cd_35_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <Label Background="{x:Null}" Content="1" FontWeight="SemiBold" Foreground="#FF2D2E32" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,218,16,0" Name="cd_42_lab" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="44" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="44,251,0,0" Name="textBlock1" Text="Today" VerticalAlignment="Top" Foreground="#FF2F2F2F" FontWeight="Medium" />
+        <TextBlock Height="19" HorizontalAlignment="Left" Margin="17,251,0,0" Name="textBlock2" Text="" VerticalAlignment="Top" Width="19" Background="Blue" />
+        <TextBlock FontWeight="Medium" Foreground="#FF2F2F2F" Height="23" HorizontalAlignment="Right" Margin="0,251,166,0" Name="textBlock3" Text="Holidays" VerticalAlignment="Top" Width="57" />
+        <TextBlock Background="Orange" Height="19" HorizontalAlignment="Left" Margin="100,251,0,0" Name="textBlock4" Text="" VerticalAlignment="Top" Width="19" />
+        <Separator Height="23" HorizontalAlignment="Left" Margin="-9,267,0,0" Name="separator1" VerticalAlignment="Top" Width="361" Background="#FFCED3D7" />
+        <Label Content="Upcoming Events" Height="32" HorizontalAlignment="Left" Margin="15,282,0,0" Name="label2" VerticalAlignment="Top" FontWeight="SemiBold" Foreground="#FF004DA9" FontSize="15" />
+        <Grid Height="54" HorizontalAlignment="Left" Margin="12,312,0,0" Name="event_grid1" VerticalAlignment="Top" Width="328">
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="46,7,0,0" Name="event_title_tBlock1" Text="Example event name would go here" VerticalAlignment="Top" Width="279" FontSize="15" FontWeight="SemiBold" Foreground="#FF333333" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="46,27,0,0" Name="event_description_tBlock1" Text="All day event" VerticalAlignment="Top" Width="279" FontSize="12" FontWeight="SemiBold" Foreground="#FF333333" />
+            <Grid Background="#FFEEF2F3" Height="36" HorizontalAlignment="Left" Margin="7,9,0,0" Name="grid2" VerticalAlignment="Top" Width="33">
+                <Label Content="24" FontSize="19" FontWeight="ExtraBold" Foreground="#FF333333" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="0,-7,0,6" Name="event_day_lab1" Width="33" />
+                <Label Content="OCT" FontSize="10" FontWeight="SemiBold" Foreground="#FF333333" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="0,14,0,0" Name="event_month_lab1" VerticalAlignment="Top" Width="33" />
+            </Grid>
+        </Grid>
+        <Grid Height="54" HorizontalAlignment="Left" Margin="12,365,0,0" Name="event_grid2" VerticalAlignment="Top" Width="328">
+            <TextBlock FontSize="15" FontWeight="SemiBold" Foreground="#FF333333" Height="23" HorizontalAlignment="Left" Margin="46,7,0,0" Name="event_title_tBlock2" Text="Example event name would go here" VerticalAlignment="Top" Width="279" />
+            <TextBlock FontSize="12" FontWeight="SemiBold" Foreground="#FF333333" Height="23" HorizontalAlignment="Left" Margin="46,27,0,0" Name="event_description_tBlock2" Text="All day event" VerticalAlignment="Top" Width="279" />
+            <Grid Background="#FFEEF2F3" Height="36" HorizontalAlignment="Left" Margin="7,9,0,0" Name="grid4" VerticalAlignment="Top" Width="33">
+                <Label Content="24" FontSize="19" FontWeight="ExtraBold" Foreground="#FF333333" Height="37" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="0,-7,0,0" Name="event_day_lab2" VerticalAlignment="Top" Width="33" />
+                <Label Content="OCT" FontSize="10" FontWeight="SemiBold" Foreground="#FF333333" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="0,14,0,0" Name="event_month_lab2" VerticalAlignment="Top" Width="33" />
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
